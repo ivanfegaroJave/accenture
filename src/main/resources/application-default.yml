@@ -1,0 +1,12 @@
+server:
+  port: 9086
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+
+services:
+  holder: https://jsonplaceholder.typicode.com/
+  photos: photos
+  users: users
+  albums: albums
