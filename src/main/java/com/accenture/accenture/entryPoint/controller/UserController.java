@@ -8,10 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,10 +21,19 @@ public class UserController {
     private final UserService userService;
 
 
-    @GetMapping(value = ResourceEndpoint.ALL_USERS, produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = ResourceEndpoint.PATH, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<User>> getUsers() {
         return new ResponseEntity<>(userService.getUsers(), HttpStatus.OK);
     }
 
+    @GetMapping(value = ResourceEndpoint.ID_PARAMETER, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<User> getUserById(@PathVariable Long id) {
+        return new ResponseEntity<>(userService.getUserById(id), HttpStatus.OK);
+    }
+
+    @GetMapping(value = ResourceEndpoint.ALBUM_BY_PERMISSION, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<User>> getUsersByAlbumByPermission(@PathVariable Long id) {
+        return new ResponseEntity<>(userService.getUSerByPermissionByAlbum(id), HttpStatus.OK);
+    }
 
 }

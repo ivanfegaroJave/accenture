@@ -9,13 +9,12 @@ import java.io.Serializable;
 @Getter
 @Setter
 @Builder
-public class Albums implements Serializable {
+public class Album implements Serializable {
 
-    private int userId;
-    private int id;
+    private Long userId;
+    private Long id;
 
     private String title;
-    private String body;
 
 
 }
