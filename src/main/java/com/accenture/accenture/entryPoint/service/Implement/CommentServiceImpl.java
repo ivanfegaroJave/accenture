@@ -11,6 +11,12 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * Class in charge to implement the logic of get the comments data
+ * @author Iván García
+ * @version v1
+ */
 @Service
 @RequiredArgsConstructor
 public class CommentServiceImpl implements CommentService {
@@ -20,21 +26,48 @@ public class CommentServiceImpl implements CommentService {
     private final PostService postService;
 
 
+    /**
+     * Call the service Client
+     * Bring the data from the client and response list of comments
+     * @returns List<Comments> list of comments
+     */
     @Override
     public List<Comment> getAllComments() {
         return holderServiceClient.getComments();
     }
 
+    /**
+     * Call the service Client
+     * Bring the data from the client and response list of comments
+     * based on id's comments
+     * @param id
+     * @returns List<Album> list of albums
+     */
     @Override
     public List<Comment> getCommentsByID(Long id) {
         return holderServiceClient.getCommentsById(id);
     }
 
+    /**
+     * Call the service Client
+     * Bring the data from the client and response list of comments
+     * based on id's Post
+     * @param id post Id
+     * @returns List<Album> list of albums
+     */
     @Override
     public List<Comment> getCommentsByPostId(Long id) {
         return holderServiceClient.getCommentsByPostId(id);
     }
 
+    /**
+     * Call the service Client
+     * and filter by name or userId
+     * response list of comments
+     * @param id userId
+     * @param name name
+     * @returns List<Album> list of albums
+     */
     @Override
     public List<Comment> getCommentsByUserIdOrName(Long id, String name) {
         List<Comment> listCommentsByUser;

@@ -5,17 +5,12 @@ import com.accenture.accenture.domain.User;
 import java.util.List;
 
 /**
- * Interface class that describes the methods that get the data from Client
- *
+ * Interface based in bring the data related to the users
+ * from the service Client
  * @author Iván García
  * @version v1
  */
-
 public interface UserService {
-
-     /**
-      * Interface of the method that  bring all the data from client users
-      */
 
      List<User> getUsers();
 

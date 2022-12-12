@@ -17,6 +17,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
+/**
+ * Class in charge to expose an Album service
+ * @author Iván García
+ * @version v1
+ */
 @RestController
 @RequiredArgsConstructor
 @CrossOrigin(origins = Constants.CROSS_ORIGIN)

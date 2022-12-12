@@ -10,6 +10,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Column;
 import javax.persistence.UniqueConstraint;
 import java.io.Serializable;
+
+/**
+ * Class in charge to implement the model of the DB h2
+ * @author Iván García
+ * @version v1
+ */
 @Data
 @Entity
 @Table(name = "PERMISSION", uniqueConstraints = @UniqueConstraint(columnNames = { "USER_ID", "ALBUM_ID" }))

@@ -6,8 +6,8 @@ import com.accenture.accenture.domain.User;
 import java.util.List;
 
 /**
- * Interface class that describes the methods that get the data from Client photos
- *
+ * Interface based in bring the data related to the Photos
+ * from the service Client
  * @author Iván García
  * @version v1
  */

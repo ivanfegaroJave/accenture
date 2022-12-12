@@ -22,7 +22,7 @@ public class Constants {
     public static final String USERID = "userId";
     public static final String COMMENTS_BY_ID = "/comments/{id}";
     public static final String PHOTOS_BY_ALBUM = "/albums/{id}/photos";
-    public static final String USER_ID = "/{id}";
+    public static final String USER_ID = "/users/{id}";
     public static final String ID = "id";
     public static final String NOT_EXIST = "Client doesn't exist with id: ";
     public static final String POST_ID = "postId";

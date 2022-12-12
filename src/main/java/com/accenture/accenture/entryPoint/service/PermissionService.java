@@ -5,6 +5,11 @@ import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
+/**
+ * Interface based in bring the data from the H2 DB
+ * @author Iván García
+ * @version v1
+ */
 public interface PermissionService {
 
 
