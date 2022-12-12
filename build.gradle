@@ -49,3 +49,45 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+ jacocoTestReport {
+	 reports {
+		 xml.enabled true
+		 html.enabled true
+		 html.destination file("$buildDir/reports/jacoco")
+	 }
+
+	 afterEvaluate {
+		 classDirectories.setFrom(files(classDirectories.files.collect {
+			 fileTree(dir: it,
+					 exclude: ['**/configuration/**',
+							   '**/domain/**',
+							   '**/crosscuting/**'
+					 ]
+			 )
+		 }))
+	 }
+ }
+
+
+ jacocoTestCoverageVerification {
+	 violationRules {
+		 rule {
+			 limit {
+				 minimum = 0.8
+			 }
+		 }
+
+		 rule {
+			 enabled = false
+			 element = 'CLASS'
+			 includes = ['org.gradle.*']
+
+			 limit {
+				 counter = 'LINE'
+				 value = 'TOTALCOUNT'
+				 maximum = 0.3
+			 }
+		 }
+	 }
+ }

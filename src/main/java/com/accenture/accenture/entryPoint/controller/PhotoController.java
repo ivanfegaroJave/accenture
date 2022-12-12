@@ -33,7 +33,7 @@ public class PhotoController {
 
 
     /**
-     * información del servicio se tiene que poder acceder a través de nuestra API a:
+     * Información del servicio se tiene que poder acceder a través de nuestra API a:
      * 1 Las Fotos
      * 4. Plus: Las fotos de un usuario.
      * */
@@ -43,7 +43,7 @@ public class PhotoController {
     }
 
     /**
-     * información del servicio se tiene que poder acceder a través de nuestra API a:
+     * Información del servicio se tiene que poder acceder a través de nuestra API a:
      * 4. Plus: Las fotos de un usuario.
      * */
     @GetMapping(value = ResourceEndpoint.PHOTOS_BY_USER, produces = MediaType.APPLICATION_JSON_VALUE)

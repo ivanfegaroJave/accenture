@@ -1,14 +1,15 @@
 # accenture
 
-Se desarrollo un MicroServicio con Spring-boot con DB h2 en memoria y JPA para la persistencia de la misma.
+Se desarrolló un MicroServicio con Spring-boot con DB h2 en memoria y JPA para la persistencia de la misma.
 Se observa la documentacion de los servicios por medio de la API swagger http://localhost:9086/swagger-ui/index.html#/
-se utilizo la interface FeignClient para el consumo del cliente.
+se utilizo la interfaz FeignClient para el consumo del cliente.
 Junit (MOckito) para pruebas unitarias.
+JAcoco Reporte de Pruebas unitarias PAth build/reports/tests/test/index.html
 Gradle para repositorio de librerias.
 Archivo yml para configuracion en difentes abmientes.
 
 
-información del servicio se tiene que poder acceder a través de nuestra API a:
+Información del servicio se tiene que poder acceder a través de nuestra API a:
 1. Los usuarios.
 - La solucion se puede encontrar en el siguiente endPoint
 GET http://localhost:9086/api/v1/users/
@@ -47,5 +48,5 @@ GET http://localhost:9086/api/v1/comment/filter
 
 # Despliegue
 
-Gradle install
+Gradle build
 $ java -jar target/accenture-0.0.1-SNAPSHOT.jar
