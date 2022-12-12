@@ -21,7 +21,6 @@ public class PermissionServiceImpl implements PermissionService {
 
     private final PermissionRepository permissionRepository;
 
-    private final UserService userService;
 
     @Override
     public List<Permission> getAllPermissions() {

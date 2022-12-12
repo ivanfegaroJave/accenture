@@ -34,14 +34,4 @@ public class AlbumController {
     public ResponseEntity<List<Album>> getAlbumsByUser(@PathVariable Long id) {
         return new ResponseEntity<>(albumService.getAlbumsByUser(id), HttpStatus.OK);
     }
-
-
-
-
-
-
-
-
-
-
 }
